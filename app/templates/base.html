@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    {% include 'partials/head.html' %}
+</head>
+<body class="bg-gray-100 text-gray-800">
+    <!-- Header -->
+    {% include 'partials/header.html' %}
+
+    <!-- Contenido principal -->
+    <div class="flex justify-around w-full">
+        <!-- Sidebar -->
+        <aside class="bg-gray-200 p-4 hidden md:block w-[25%]">
+            {% include 'partials/sidebar.html' %}
+        </aside>
+
+        <!-- Contenido dinámico -->
+        <main class="mt-2 flex-grow p-4">
+            {% block content %}{% endblock %}
+        </main>
+    </div>
+
+    <!-- Footer -->
+    {% include 'partials/footer.html' %}
+</body>
+</html>
